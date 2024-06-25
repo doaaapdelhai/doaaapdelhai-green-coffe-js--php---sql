@@ -35,7 +35,7 @@ if(isset($_POST['logout'])){
         <a href="home.php">home</a><span> / about</span>
     </div>
     <div class="about-category">
-        <div class="box">
+        <div class="box_about_cat">
             <img src="img/3.webp" alt="">
             <div class="detail">
                 <span>coffee</span>
@@ -43,7 +43,7 @@ if(isset($_POST['logout'])){
                 <a href="view_products.php" class='btn'> shop now </a>
             </div>
         </div>
-        <div class="box">
+        <div class="box_about_cat">
             <img src="img/about.png" alt="">
             <div class="detail">
                 <span>coffee</span>
@@ -51,7 +51,7 @@ if(isset($_POST['logout'])){
                 <a href="view_products.php" class='btn'> shop now </a>
             </div>
         </div>
-        <div class="box">
+        <div class="box_about_cat">
             <img src="img/about.png" alt="">
             <div class="detail">
                 <span>coffee</span>
@@ -59,7 +59,7 @@ if(isset($_POST['logout'])){
                 <a href="view_products.php" class='btn'> shop now </a>
             </div>
         </div>
-        <div class="box">
+        <div class="box_about_cat">
             <img src="img/1.webp" alt="">
             <div class="detail">
                 <span>coffee</span>
@@ -69,7 +69,7 @@ if(isset($_POST['logout'])){
         </div>
     </div>
     <!--  -->
-
+           
     <section class='services'>
         <div class="title">
             <img src="img/download.png" class='logo' alt="">
@@ -77,29 +77,29 @@ if(isset($_POST['logout'])){
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, delectus.</p>
         </div>
 
-            <div class="box-container">
-                <div class="box">
+            <div class="box-container_about">
+                <div class="box_about">
                     <img src="img/icon2.png" alt="">
                  <div class="detail">
                     <h3>grate saving </h3>
                     <p>save big every order</p>
                  </div>
                 </div>
-                <div class="box">
+                <div class="box_about">
                     <img src="img/icon1.png" alt="">
                  <div class="detail">
                     <h3>24*7 support  </h3>
                     <p>one one one support</p>
                  </div>
                 </div>
-                <div class="box">
+                <div class="box_about">
                     <img src="img/icon0.png" alt="">
                  <div class="detail">
                     <h3>gvouchers </h3>
                     <p>gvouchers one festival</p>
                  </div>
                 </div>
-                <div class="box">
+                <div class="box_about">
                     <img src="img/icon.png" alt="">
                  <div class="detail">
                     <h3>worldwid delivery  </h3>
@@ -111,13 +111,15 @@ if(isset($_POST['logout'])){
         <!-- ============== img showroom in about bage============== -->
         <div class="about">
             <div class="row">
-                <div class="img-box">
+                <div class="img-box_about">
                     <img src="img/3.png" alt="">
                 </div>
-                <div class="detail">
+                <div class="detail_about">
                     <h1>visit our beautiful showroom! </h1>
                   <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque quas, provident magnam dolorum illum impedit quae tenetur itaque reprehenderit aut vel illo officiis odio, aspernatur eligendi quam voluptatem incidunt possimus.</p> 
-                    <a href="view_products.php" class='btn'> shop now</a>
+
+                <a href="view_products.php" class='btn'> shop now</a>
+          
                 </div>
             </div>
         </div>

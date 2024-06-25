@@ -35,30 +35,30 @@
         <a href="home.php">home</a><span> / contact</span>
     </div>
 
-    <section class='services'>
-            <div class="box-container">
-                <div class="box">
+    <section class='services_contact'>
+            <div class="box-container_contact">
+                <div class="box_contact">
                     <img src="img/icon2.png" alt="">
                  <div class="detail">
                     <h3>grate saving </h3>
                     <p>save big every order</p>
                  </div>
                 </div>
-                <div class="box">
+                <div class="box_contact">
                     <img src="img/icon1.png" alt="">
                  <div class="detail">
                     <h3>24*7 support  </h3>
                     <p>one one one support</p>
                  </div>
                 </div>
-                <div class="box">
+                <div class="box_contact">
                     <img src="img/icon0.png" alt="">
                  <div class="detail">
                     <h3>gvouchers </h3>
                     <p>gvouchers one festival</p>
                  </div>
                 </div>
-                <div class="box">
+                <div class="box_contact">
                     <img src="img/icon.png" alt="">
                  <div class="detail">
                     <h3>worldwid delivery  </h3>
@@ -97,28 +97,32 @@
  
 
         </div>
+
+
         <div class='address'>
             <div class='title'>
                     <img src="img/download.png" class='logo'>
                     <h1>contact detail</h1>
                     <p>Lorem ipsum dolor sit amet, Lorem, ipsum dolor amet, Lorem, ipsum dolor..</p>
                 </div>
-                <div class="box-container">
-                    <div class="box">
+
+
+                <div class="box-container_contact_details">
+                    <div class="box_contact_details">
                         <i class='bx bxs-map-pin'></i>
                         <div>
                              <h4>address</h4>
                              <p>Egypt</p>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box_contact_details">
                         <i class='bx bx-phone-call'></i>
                         <div>
                              <h4>phone</h4>
                              <p>+20 01285765185</p>
                         </div>
                     </div>
-                    <div class="box">
+                    <div class="box_contact_details">
                         <i class='bx bx-message'></i>
                         <div>
                              <h4>email</h4>

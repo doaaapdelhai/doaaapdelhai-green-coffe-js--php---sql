@@ -120,8 +120,8 @@ if(isset($_POST['logout'])){
         </div>
     </section>
     <!-- start  adv imgs -->
-    <section class='container'>
-        <div class='box-container'>
+    <section class='container_ads'>
+        <div class='box-container_ads'>
 
             <div class='box'>
                 <img src="img/about-us.jpg" class='img_about' alt="">
@@ -156,41 +156,49 @@ if(isset($_POST['logout'])){
         </div>
         <!-- =============== items products  ================= -->
          
-        <div class='box-container'>
+        <div class='box-container_trending'>
 
-            <div class="box">
+            <div class="box_trending">
                 <img src="img/card.jpg" class='img-product' alt="">
                 <a href="view_products.php" class='btn' > Shop Now</a>
             </div>
-            <div class="box">
-                <img  src="img/10.jpg"class='img-product' alt="">
+            <div class="box_trending">
+                <img  src="img/d8.jpg"class='img-product' alt="">
                 
                 <a href="view_products.php" class='btn' > Shop Now</a>
             </div>
-            <div class="box">
+            <div class="box_trending">
                 <img src="img/card2.jpg"class='img-product' alt="">
                 <a href="view_products.php" class='btn' > Shop Now</a>
             </div>
-            <div class="box">
-                <img src="img/card1.jpg" class='img-product' alt="">
+            <div class="box_trending">
+                <img src="img/d10.jpg" class='img-product' alt="">
                 <a href="view_products.php" class='btn' > Shop Now</a>
             </div>
-            <div class="box">
+            <div class="box_trending">
                 <img src="img/card0.jpg" class='img-product' alt="">
                 <a href="view_products.php" class='btn' > Shop Now</a>
             </div>
-            <div class="box">
-                <img src="img/6.webp"  class='img-product' alt="">
+            <div class="box_trending">
+                <img src="img/d8.jpg"  class='img-product' alt="">
                 <a href="view_products.php" class='btn' > Shop Now</a>
             </div>     
         </div>
     </section>
     <!-- end items -->
-    <!-- start category -->
 
-    <section class='shop-category'>
-        <div class="box-container">
-            <div class="box">
+
+
+
+
+
+
+
+
+    <!-- start category_bannar -->
+    <section class='shop-category_bannar2'> 
+        <div class="box-container_bannar2">
+            <div class="box_bannar2">
                 <img src="img/6.jpg" class='photo-cat' alt="">
                  <div class='detail'>
                     <span>BIG OFFERS </span>
@@ -199,7 +207,7 @@ if(isset($_POST['logout'])){
                  </div>
             </div>
 
-            <div class="box">
+            <div class="box_bannar2">
                 <img src="img/7.jpg"  class='z' alt="">
                  <div class='detail'>
                     <span>new in test </span>
@@ -209,72 +217,72 @@ if(isset($_POST['logout'])){
             </div>
         </div>
     </section>
-        <!-- end category --> 
+        <!-- end category_bannar  -->
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- start services-->
         <section class='services'>
-            <div class="box-container">
-                <div class="box">
+            <div class="box_container_services">
+                <div class="box_services">
                     <img src="img/icon2.png" alt="">
                  <div class="detail">
-                    <h3>grate saving </h3>
+                    <h4>grate saving </h4>
                     <p>save big every order</p>
                  </div>
                 </div>
-                <div class="box">
+                <div class="box_services">
                     <img src="img/icon1.png" alt="">
                  <div class="detail">
-                    <h3>24*7 support  </h3>
+                    <h4>24*7 support  </h4>
                     <p>one one one support</p>
                  </div>
                 </div>
-                <div class="box">
+                <div class="box_services">
                     <img src="img/icon0.png" alt="">
                  <div class="detail">
-                    <h3>gvouchers </h3>
+                    <h4>gvouchers </h4>
                     <p>gvouchers one festival</p>
                  </div>
                 </div>
-                <div class="box">
+                <div class="box_services">
                     <img src="img/icon.png" alt="">
                  <div class="detail">
-                    <h3>worldwid delivery  </h3>
+                    <h4>worldwid delivery  </h4>
                     <p>dropship worldwide</p>
                  </div>
                 </div>
             </div>
         </section>
-
+             <!-- brands -->
         <section class='brand'>
-         <div class='box-container'>
-            <div class="box">
+         <div class='box-container_brand'>
+            <div class="box_brand">
                 <img src="img/brand (1).jpg" alt="">
             </div>
-            <div class="box">
+            <div class="box_brand">
                 <img src="img/brand (2).jpg" alt="">
             </div>
-            <div class="box">
+            <div class="box_brand">
                 <img src="img/brand (3).jpg" alt="">
             </div>
-            <div class="box">
+            <div class="box_brand">
                 <img src="img/brand (4).jpg" alt="">
             </div>         
         </div>    
         </section>
-
-
         <!-- end  services-->
-
-
-
-
-
-
-
-
     <?php include 'footer.php'; ?>
-
-
 </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js">  </script>

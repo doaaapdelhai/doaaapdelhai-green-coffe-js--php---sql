@@ -7,7 +7,7 @@ if(isset($_SESSION['user_id'])){
     $user_id = '';
 }
 
-//register user
+//register user 
 if(isset($_POST['submit'])){
     
     $email = $_POST['email'];
@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
    
      
     $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ? ");
-    $select_user->execute([$email , $pass]);
+    $select_user->execute([$email , $pass]); 
     $row = $select_user->fetch(PDO::FETCH_ASSOC); 
 
     if($select_user->rowCount() > 0){
