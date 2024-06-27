@@ -616,7 +616,7 @@ header.scrolled{
    max-width: 100%;
    height: auto;
  }
- /* =============================== end brands */
+ /* =============================== end brands================ */
 /* =======================start category===================== */
  .shop-category_bannar2 {
    padding: 4rem 10;
@@ -1226,6 +1226,78 @@ textarea{
    font-size: 18px;
    margin-top: 15px;
  }
+ /* ======================================  view page =================================== */
+ .view_page{
+   padding: 5% 8%;
+   background-image: url(img/bg.jpg);
+
+ }
+ .view_page form {
+  display: grid;
+  grid-template-columns:repeat(auto-fit , minmax(35px , 1fr)) ;
+  justify-content: center;
+  align-items: center;
+  box-shadow:   0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+ }
+ .view_page form img{
+   padding: .5rem;
+   box-shadow:   0 2px 8px rgba(0, 0, 0, 0.1);
+   width: 400px;
+   height: 400px;
+ }
+ .view_page form .name{
+   font-size: 2rem;
+   text-transform: capitalize;
+   color: var(--green);
+ }
+ .view_page form .price{
+   font-size: 24px;
+   line-height: 1;
+text-align: center;
+   margin-bottom: 22px;
+   margin-top: 20px;
+ }
+ .view_page form .detail{
+   font-size: 16px;
+   color: gray;
+   line-height: 2;
+   margin-bottom: .5rem;
+ }
+ .view_page .btn{
+   background:#acc56d;
+   cursor: pointer;
+   font-size: 18px;
+   margin: 15px 0px;
+   margin-right: 15px;
+   color: whitesmoke;
+
+ }
+ .cart-total .button{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+ .cart-total .button .btn{
+   margin: 1rem;
+   /* margin-bottom: 30px; */
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1352,10 +1424,7 @@ textarea{
         position: absolute;
         width: 100%;
         padding: 0 2rem;
-        /* position: fixed; */
-        top: 130%;
-        /* z-index: 111111; */
-        left: 0;
+        top: 130%;        left: 0;
         display: block;
         right: 0;
         border-top: 1px solid var(--green);
@@ -1370,7 +1439,6 @@ textarea{
         display: flex;
         margin: 2rem;
         justify-content: center;
-        /* border-bottom: 1px solid var(--green); */
     }
     .form-container{
         width: 100%;

@@ -7,6 +7,8 @@ if(isset($_SESSION['user_id'])){
     $user_id = '';
 }
 
+
+
 //register user
 if(isset($_POST['submit'])){
     $id=unique_id();

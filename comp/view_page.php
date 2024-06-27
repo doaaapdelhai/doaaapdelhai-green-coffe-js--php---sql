@@ -1,6 +1,8 @@
 <?php 
  
  include 'conection.php';
+
+
  session_start();
  if(isset($_SESSION['user_id'])){
      $user_id = $_SESSION['user_id'];
@@ -79,54 +81,67 @@ if(isset($_POST['add_to_cart'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.1/css/boxicons.min.css">
-    <title>green coffee - shope page</title>
+    <title>green coffee - product detail</title>
 </head>
 <body>
 <?php include 'header.php'; ?>
 <div class=' main'>
 <div class="bannar">
-    <h1>shope us</h1>
+    <h1>product detail</h1>
 </div>
 <div class="title2">
-    <a href="home.php">home</a><span> / our shope</span>
+    <a href="home.php">home</a><span> /product detail</span>
 </div>
-<section class='products'>
-    <div class="box-container">
-        <?php
-        $select_products = $conn->prepare("SELECT * FROM `products`");
-        $select_products->execute();
-        if ($select_products->rowCount() > 0) {
-            while ($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)) {
-        ?>
-                <form action="" method='post' class='box'>
-                    <div class="product-image">
-                        <img src="<?php echo $fetch_products['image']; ?>" class="img">
-                        <div class='button-container'>
-                        <h3 class='name'><?= $fetch_products['name']; ?></h3>
-                        <div class='flex'>
-                     <p class='price'>price $<?= $fetch_products['price']; ?>/-</p>
-                      <input type="number"  name='qty' required class='q' min="1" max="99" value="1"  maxlength="2">
-                 </div>
-                 <div class='icons_div'>
-                 <button type='submit' name='add_to_cart'><i class='bx bx-cart ic'></i></button>
-                            <button type='submit' name='add_to_wishlist'><i class='bx bx-heart ic'></i></button>
-                            <a href="view_page.php?pid=<?= $fetch_products['id']; ?>" class='bx bxs-show ic'></a>
-                 </div>
-                           
+<section class='view_page'>
 
-                        </div>
-                    </div>
-                    <input type="hidden" name='product_id' value="<?= $fetch_products['id']; ?>">
-               <!-- flex -->
-                    <a href="checkout.php?get_id=<?= $fetch_products['id']; ?>" class='btn'>buy now</a>
-                </form>
-        <?php
-            }
-        } else {
-            echo '<p class="empty">no product added yet!</p>';
-        }
-        ?>
+<?php
+if(isset($_GET['pid'])){
+    $pid = $_GET['pid'];
+    $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = '$pid' ");
+    $select_products->execute();
+    if($select_products->rowCount() > 0){
+        while($fetch_products = $select_products->fetch(PDO::FETCH_ASSOC)){
+
+ 
+?>
+
+<form method='post'>
+    <img src="<?php echo $fetch_products['image'];?> " alt="">
+    <div class='detail'>
+    <div class='price'> Price : <?php echo $fetch_products['price'];?> $</div>
+
+    <div class='name'> name : <?php echo $fetch_products['name'];?></div>
+
+    <div class="product-detail">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero voluptates sint expedita, quia incidunt explicabo, voluptatibus delectus sed nihil maiores aliquam ipsa. Tempore labore velit incidunt culpa neque fugiat non  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet quasi ex delectus culpa, qui odit eum hic voluptatibus voluptates ipsam aperiam est alias eos, aspernatur rem quidem del.</p>
     </div>
+    <input type="hidden" name="product_id" value="<?php echo $fetch_products['id'];?>">
+    <div class="button">
+        <button type="submit" name="add_to_wishlist" class='btn'> add to wishlist <i class='bx bx-heart'></i> </button>
+        <input type="hidden" name='qty' value='1' min='0' class="quantity">
+        <button type="submit" name="add_to_cart" class='btn'> add to cart <i class='bx bx-cart'></i> </button>
+
+    </div>
+ </div>
+</form>
+
+
+<?php
+       }
+
+    }
+}   
+
+?>
+
+
+
+
+
+
+
+
+
 </section>
 <?php include 'footer.php'; ?>
 

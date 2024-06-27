@@ -6,7 +6,7 @@ if(isset($succes_msg)){
 }
 if(isset($warning_msg)){
     foreach ($warning_msg as $warning_msg){
-        echo '<script>swal ("'.$warning_msg.'" , "" , "success");</script>';
+        echo '<script>swal ("'.$warning_msg.'" , "" , "warning");</script>';
     }
 }
 if(isset($info_msg)){
