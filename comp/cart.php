@@ -50,11 +50,9 @@
 <div class="title2">
     <a href="home.php">home</a><span> /cart </span>
 </div>
-
 <section class='products'>
     <h1 class='title'> product added to cart </h1>
     <div class="box-container">
-
     <?php
 $grand_total = 0;
 $select_cart = $conn->prepare("SELECT * FROM `cart` WHERE user_id = ?");
@@ -62,20 +60,26 @@ $select_cart->execute([$user_id]);
 
 if ($select_cart->rowCount() > 0) {
     while ($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)) {
-        $select_cart = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+        $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
         $select_products->execute([$fetch_cart['product_id']]);
 
         if ($select_products->rowCount() > 0) {
             $fetch_products = $select_products->fetch(PDO::FETCH_ASSOC);
 
-  
             ?>
             <form action="" method='post' class='box'>
                 <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
                 <img src="<?php echo $fetch_products['image']; ?>" class="img">
                 <h3 class='name'><?= $fetch_products['name'];  ?></h3>
-                <div class="flex">
-                        <p class='price'> price <?= $fetch_products['price']; ?>  $ </p>
+                <p class='price'> price <?= $fetch_products['price']; ?>  $ </p>
+
+                <div class="icons_div">
+                        <button type='submit' name='add_to_cart'><i class='bx bx-cart ic'></i></button>
+
+<a href="view_page.php?pid=<?= $fetch_products['id']; ?>" class='bx bxs-show ic'></a>
+
+<!-- <button type='submit' name='delete_item' onclick="return confirm('delete this item');" ><i class='bx bx-x ic'></i></button> -->
+
                      </div>
 
 
@@ -88,8 +92,6 @@ if ($select_cart->rowCount() > 0) {
         echo '<p class="empty"> no products added yet !  </p>';
     }
  ?>
-
-
 
 </section>
 
