@@ -1,32 +1,22 @@
 <?php
-if(isset($succes_msg)){
-    foreach ($succes_msg as $succes_msg){
-        echo '<script>swal ("'.$succes_msg.'" , "" , "success");</script>';
+if(isset($success_msg)){
+    foreach ($success_msg as $msg){
+        echo '<script>swal("'.$msg.'", "", "success");</script>';
     }
 }
 if(isset($warning_msg)){
-    foreach ($warning_msg as $warning_msg){
-        echo '<script>swal ("'.$warning_msg.'" , "" , "warning");</script>';
+    foreach ($warning_msg as $msg){
+        echo '<script>swal("'.$msg.'", "", "warning");</script>';
     }
 }
 if(isset($info_msg)){
-    foreach ($info_msg as $info_msg){
-        echo '<script>swal ("'.$info_msg.'" , "" , "success");</script>';
+    foreach ($info_msg as $msg){
+        echo '<script>swal("'.$msg.'", "", "info");</script>';
     }
 }
 if(isset($error_msg)){
-    foreach ($error_msg as $error_msg){
-        echo '<script>swal ("'.$error_msg.'" , "" , "success");</script>';
+    foreach ($error_msg as $msg){
+        echo '<script>swal("'.$msg.'", "", "error");</script>';
     }
 }
-<<<<<<< HEAD
 ?>
-
-
-
-
-
-
-=======
-?>
->>>>>>> 0e47ffe912a83289512b157d3a2cefc50871d7a6
