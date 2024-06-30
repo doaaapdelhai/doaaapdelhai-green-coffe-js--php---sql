@@ -109,8 +109,13 @@ if(isset($_POST['add_to_cart'])){
                  </div>
                  <div class='icons_div'>
                  <button type='submit' name='add_to_cart'><i class='bx bx-cart ic'></i></button>
+<<<<<<< HEAD
                  <button type='submit' name='add_to_wishlist'><i class='bx bx-heart ic'></i></button>
                   <a href="view_page.php?pid=<?= $fetch_products['id']; ?>" class='bx bxs-show ic'></a>
+=======
+                            <button type='submit' name='add_to_wishlist'><i class='bx bx-heart ic'></i></button>
+                            <a href="view_page.php?pid=<?= $fetch_products['id']; ?>" class='bx bxs-show ic'></a>
+>>>>>>> 0e47ffe912a83289512b157d3a2cefc50871d7a6
                  </div>
                            
 

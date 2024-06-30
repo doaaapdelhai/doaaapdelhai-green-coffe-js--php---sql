@@ -270,11 +270,17 @@ header.scrolled{
  }
  .slider__slider .slide-detail{
     position: absolute;
+<<<<<<< HEAD
     top: 35%;
     left: 20px;
     text-align: center;
     /* background-color: red; */
     margin-left: 300px;
+=======
+    top: 30%;
+    left: 20px;
+    text-align: center;
+>>>>>>> 0e47ffe912a83289512b157d3a2cefc50871d7a6
  }
  .slider__slider .slide-detail h1{
     font-size: 30px;
@@ -306,8 +312,11 @@ header.scrolled{
     color:#fff;
     margin-top: 2rem;
     margin-bottom: 2rem;
+<<<<<<< HEAD
     /* margin-left: 45px; */
     /* margin-left: 550px; */
+=======
+>>>>>>> 0e47ffe912a83289512b157d3a2cefc50871d7a6
  }
  .slide1{
     background-image: url(img/slider.jpg);
@@ -943,7 +952,10 @@ textarea{
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+<<<<<<< HEAD
    /* background-color: red; */
+=======
+>>>>>>> 0e47ffe912a83289512b157d3a2cefc50871d7a6
 }
 .products .box-container .box {
    width: 290px;
@@ -1252,7 +1264,11 @@ textarea{
    height: 400px;
  }
  .view_page form .name{
+<<<<<<< HEAD
    font-size: 1.8rem;
+=======
+   font-size: 2rem;
+>>>>>>> 0e47ffe912a83289512b157d3a2cefc50871d7a6
    text-transform: capitalize;
    color: var(--green);
  }
@@ -1285,11 +1301,17 @@ text-align: center;
  }
  .cart-total .button .btn{
    margin: 1rem;
+<<<<<<< HEAD
  }
 /* ============================wish list==================================== */
 .boxx{
    background-color: red;
 }
+=======
+   /* margin-bottom: 30px; */
+ }
+
+>>>>>>> 0e47ffe912a83289512b157d3a2cefc50871d7a6
 
 
 

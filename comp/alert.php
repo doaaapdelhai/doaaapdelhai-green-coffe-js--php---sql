@@ -19,6 +19,7 @@ if(isset($error_msg)){
         echo '<script>swal ("'.$error_msg.'" , "" , "success");</script>';
     }
 }
+<<<<<<< HEAD
 ?>
 
 
@@ -26,3 +27,6 @@ if(isset($error_msg)){
 
 
 
+=======
+?>
+>>>>>>> 0e47ffe912a83289512b157d3a2cefc50871d7a6
