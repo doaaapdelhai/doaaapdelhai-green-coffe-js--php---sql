@@ -89,6 +89,7 @@ if(isset($_POST['add_to_cart'])){
 <section class='products'>
     <h1 class='title'> product added to wishlist </h1>
     <div class="box-container">
+        
     <?php
 $grand_total = 0;
 $select_wishlist = $conn->prepare("SELECT * FROM `wishlist` WHERE user_id = ?");
