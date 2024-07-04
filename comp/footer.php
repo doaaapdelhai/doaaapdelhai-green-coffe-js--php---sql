@@ -1,10 +1,4 @@
-<div class='top-footer'>
-    <h2><i class='bx bx-envelope'></i> Sign Up For Newslatter </h2>
-    <div class='input-field'>
-        <input type="text" name='' placeholder="email address...">
-        <button class='btn'>subscribe </button>
-    </div>
-</div>
+
 <footer>
     <div class="verlay"></div>
     <div class='footer-content'>
@@ -56,10 +50,13 @@
                     <i class='bx bxl-youtube'></i>
                     <i class='bx bxl-whatsapp'></i>
                 </div>
+                
             </div>
+            
         </div>
         <div class='bottom-footer'>
             <p>all right reserved - doaaapdelhai</p>
         </div>
+        
     </div>
 </footer>

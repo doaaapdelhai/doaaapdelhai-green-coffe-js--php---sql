@@ -23,6 +23,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.1/css/boxicons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
+
     <title>green coffee - order page</title>
 </head>
 <body>
@@ -34,7 +36,8 @@
 <div class="title2">
     <a href="home.php">home</a><span> / order</span>
 </div>
-<section class='products'>
+
+<section class='orders'>
     <div class="box-container">
         <div class="title">
             <img src="img/download.png" class='logo' alt="">
@@ -42,52 +45,49 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste iusto dolorum nihil culpa animi, ab impedit, ullam hic laborum nulla dignissimos earum saepe! Ea, suscipit molestias deserunt voluptatibus architecto commodi.</p>
         </div>
         <div class="box-container">
-            <?php 
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
-            error_reporting(E_ALL);
 
-            // تنفيذ استعلام لجلب الطلبات
-            $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE user_id = ? ORDER BY data DESC ");
-            $select_orders->execute([$user_id]);
+<?php 
+$select_orders = $conn->prepare("SELECT * FROM `order` WHERE user_id = ? ORDER BY date DESC");
+$select_orders->execute([$user_id]);
+if($select_orders->rowCount() > 0){
+    while($fetch_order = $select_orders->fetch(PDO::FETCH_ASSOC)){
+        $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
+        $select_products->execute([$fetch_order['product_id']]);
+        if($select_products->rowCount() > 0){
+            while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){
+?>
 
-            // التحقق مما إذا كانت هناك طلبات موجودة
-            if($select_orders->rowCount() > 0){
-                while($fetch_order = $select_orders->fetch(PDO::FETCH_ASSOC)){
-                    // تنفيذ استعلام لجلب المنتجات المرتبطة بالطلب
-                    $select_products = $conn->prepare("SELECT * FROM `products` WHERE id = ?");
-                    $select_products->execute([$fetch_order['product_id']]);
-
-                    // التحقق مما إذا كانت هناك منتجات مرتبطة بالطلب
-                    if($select_products->rowCount() > 0){
-                        while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){
-            ?>
-            <div class='box' <?php if($fetch_order['status'] == 'cancel') {echo 'style="border:2px solid red" ';} ?> >
-                <a href="view_order.php?get_id=<?= $fetch_order['id'];?>">
-                    <p class='data'><i class='bi bi-calendar-fill'> <span><?= $fetch_order['data']; ?></span></i></p>
-                    <img src="img/<?= $fetch_product['image']; ?>" class='image' alt="">
-                    <div class="row">
-                        <h3 class='name'> <?=$fetch_product['name']; ?> </h3>
-                        <p class='price'>price: $ <?=$fetch_order['price']; ?> * <?=$fetch_order['qty']; ?> </p>
-                        <p class='status' style="color:<?php if($fetch_order['status'] == 'delivery'){
-                            echo 'green'; }elseif($fetch_order['status'] == 'canceled'){echo "red";}else{
-                                echo 'orange';  } ?>"><?=$fetch_order['status']; ?></p>
-                    </div>
-                </a>
-            </div>
-            <?php      
-                        }
-                    } else {
-                        echo '<p class="empty">No products found for order ID: ' . $fetch_order['id'] . '</p>';
-                    }
-                }
-            } else {
-                echo '<p class="empty">No order takes placed yet!</p>';
-            }
-            ?>
+<div class='box' <?php if($fetch_order['status'] == 'canceled'){ echo 'style="border:2px solid red;"'; } ?>>
+    <a href="view_order.php?get_id=<?= $fetch_order['id']; ?>">
+        <img src="<?=$fetch_product['image']; ?>" class='image_order' alt="">
+        <div class='row'>
+            <h3 class='name'><?= $fetch_product['name']; ?></h3>
+            <p class='price'>Price: $<?= $fetch_order['price']; ?> * <?= $fetch_order['qty']; ?></p>
+            <p class='status' style="color:<?php 
+                if($fetch_order['status'] == 'delivered'){
+                    echo 'green'; 
+                } elseif($fetch_order['status'] == 'canceled'){ 
+                    echo 'red'; 
+                } else {  
+                    echo 'orange'; 
+                } ?>"> <?= ucfirst($fetch_order['status']); ?></p>
         </div>
+    </a>
+</div>
+<?php 
+            }
+        }
+    }
+} else {
+    echo '<p class="empty">No order takes placed yet!</p>';
+}
+?>
+</div>
+
+
     </div>
 </section>
+
 
 <?php include 'footer.php'; ?>
 
